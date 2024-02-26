@@ -7,6 +7,8 @@ public class Scorer : MonoBehaviour
     int hits = 0;
 
     private void OnCollisionEnter(Collision other) {
-        hits++;
+        if (other.gameObject.tag != "Hit") {
+            hits++;
+        }
     }
 }
